@@ -248,6 +248,9 @@ contract ACT is ERC20, Ownable {
             ""
         );
         require(success, "Transfer ETH failed");
+        // reset tax allocation to zero
+        liquidityTokens = 0;
+        treasuryTokens = 0;
     }
 
     // contract must be able to receive eth
